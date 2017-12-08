@@ -1,0 +1,29 @@
+<% include partials/header %>
+<div id='index'>
+    <h1 id='index-header'>Contact List</h1>
+    <table>
+        <th>
+            <tr id='table-header'>
+                <td>#</td>
+                <td>Name</td>
+                <td>email</td>
+                <td>phone</td>
+            </tr>
+        </th>
+        <br>
+        <% list.forEach(function(person){ %>
+            <tr class='contact-row' id= '<%= person.id %>'</tr>
+                <td class='num'><%= list.indexOf(person)+1 %></td>
+                <td class='name'><%= person.name %></td>
+                <td class='email'><%= person.email %></td>
+                <td class='phone'><%= person.phone %></td>
+                <td><button class='details'>details</button></td>
+                <td><button class='edit'>edit</button></td>
+                <td><button class='delete' onclick= "return confirm('Are you sure you want to delete this entry?')">Delete</button></td>
+            </tr>
+        <% }) %>
+    </table>
+    <script src='index.js'></script>
+    <script src="contact-list.js"></script>
+</div>
+<% include partials/footer %>

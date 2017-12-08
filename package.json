@@ -1,0 +1,27 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "IS545 class project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KyleStone87/Project_form.git"
+  },
+  "author": "Kyle Stone",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KyleStone87/Project_form/issues"
+  },
+  "homepage": "https://github.com/KyleStone87/Project_form#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "express-validator": "^4.3.0",
+    "mongojs": "^2.4.1",
+    "mongoose": "^4.13.6"
+  }
+}

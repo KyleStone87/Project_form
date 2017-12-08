@@ -1,0 +1,14 @@
+<% include partials/header %>
+<h1> Edit Contact</h1>
+<form>
+        <label>Name</label><br>
+        <input class='name' id='name' type='text' name='name' value= '<%= entry.name %>' required><br>
+        <label>Email</label><br>
+        <input class='email' id='email'type='text' name='email' value= '<%= entry.email %>' required><br>
+        <label>Phone</label><br>
+        <input class='phone' id='phone' type='text' name='phone' value= '<%= entry.phone %>' required><br>
+        <button class='add_user' type ='submit' value='Submit'>Submit</button>
+</form>
+<script src='edit.js'></script>
+<div></div>
+<% include partials/footer %>
