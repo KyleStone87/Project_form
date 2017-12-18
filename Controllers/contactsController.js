@@ -14,7 +14,7 @@ var contactSchema = new mongoose.Schema({
 })
 
 var Contact = mongoose.model('Contact', contactSchema)
-var newEntry
+var newEntry = {}
 var contactID
 var urlencodedParser = bodyParser.urlencoded({extended:false})
 module.exports = function(app){
@@ -23,7 +23,10 @@ module.exports = function(app){
 
         Contact.find({}, function(err, data){
             if (err) throw err
-            res.render('index', {list: data})
+            res.render('index', {
+                list: data,
+                entry: newEntry
+            })
         })
     })
 
@@ -61,6 +64,7 @@ module.exports = function(app){
                     res.json(foundObject)
                     newEntry = foundObject
                     contactID = foundObject.id
+                    console.log('contact captured! '+newEntry)
                 }
             }
         })
@@ -73,9 +77,7 @@ module.exports = function(app){
                 console.log("Nope, didn't work")
             }else{
                 res.json(doc)
-                console.log(doc)
-                console.log('contactID is '+contactID)
-                console.log('name is '+req.body.name)
+                console.log('Passing selected contact information')
             }
         })
     })

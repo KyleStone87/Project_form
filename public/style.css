@@ -64,7 +64,7 @@ body {
     font-family: 'arial', sans-serif;
 }
 
-.new-name, .new-email, .new-phone {
+.new-name, .new-email, .new-phone .detailInfo{
     width: 90%;
     border-radius: 2px;
     margin: 5px;
@@ -73,6 +73,7 @@ body {
 label, #add_user {
     margin: 5px;
     border-radius: 3px;
+    padding: 20px;
 }
 
 #add_user {
@@ -97,13 +98,13 @@ label, #add_user {
 }
 
 .modal-content {
+    display: none;
     background-color: white;
     margin: auto;
     z-index: 2;
     position: relative;
     top:10%;
     left:20%;
-    height: 250px;
     animation-name: modalopen;
     animation-duration:0.5s;
 }
@@ -126,6 +127,21 @@ label, #add_user {
     font-size: 28px;
 }
 
+#details-modal{
+    display: none;
+    box-shadow: -10px 10px black;
+    background-color: white;
+    width: 400px;
+    margin: auto;
+    z-index: 2;
+    position: relative;
+    top:10%;
+    left:20%;
+    animation-name: modalopen;
+    animation-duration:0.5s;
+}
+}
+
 @keyframes modalopen{
     from{
         opacity:0;
@@ -133,6 +149,6 @@ label, #add_user {
     }
     to{
         opacity:1;
-        height:250px;
+        height:240px;
     }
 }
